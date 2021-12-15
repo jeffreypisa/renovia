@@ -1,0 +1,99 @@
+.tease {
+	position: relative;
+	padding-top: 100%;
+	display: block;
+	margin-bottom: 20px;
+	.bg {
+		position: absolute;
+		background-size: cover;
+		background-position: center center;
+		&:after {
+			content: '';
+			background: $green;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			position: absolute;
+			z-index: 1;
+			opacity: 0;
+			transition: 1s $ease;
+		}
+	}
+	&:hover {
+		.bg {
+			box-shadow: 0 30px 80px 0 #151518;
+			&:after {
+				opacity: .5;
+			}
+		}
+	}
+	&.tease-1 {
+		.bg {
+			top: 0;
+			left: 15%;
+			right: 15%;
+			bottom: 0;
+		}
+	}
+	&.tease-2 {
+		.bg {
+			top: 0;
+			left: 15%;
+			right: 15%;
+			bottom: 0;
+			transform: scale(0.8);
+		}
+	}
+	&.tease-3 {
+		.bg {
+			top: 0%;
+			left: 0;
+			bottom: 30%;
+			right: 0;
+			transform: scale(0.8);
+		}
+	}
+	&.tease-4 {
+		.bg {
+			top: 15%;
+			left: 0;
+			bottom: 15%;
+			right: 0;
+			transform: scale(0.8);
+		}
+	}
+	&.tease-5 {
+		.bg {
+			top: 30%;
+			left: 0;
+			bottom: 0%;
+			right: 0;
+			transform: scale(0.8);
+		}
+	}
+	&.tease-6 {
+		.bg {
+			top: 15%;
+			left: 0;
+			bottom: 15%;
+			right: 0;
+		}
+	}
+	&.tease-7 {
+		.bg {
+			top: 30%;
+			left: 0;
+			bottom: 0%;
+			right: 0;
+		}
+	}
+	&.tease-8 {
+		.bg {
+			top: 0%;
+			left: 0;
+			bottom: 30%;
+			right: 0;
+		}
+	}
+}

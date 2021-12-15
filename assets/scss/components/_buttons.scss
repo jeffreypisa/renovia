@@ -1,0 +1,29 @@
+.btn {
+	font-weight: 700;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line-height: 28px;
+	color: #fff;
+	clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
+	transition: 1s $ease;
+	&:hover, &:focus, &:target {
+		clip-path: polygon(0 0, 100% 12%, 100% 88%, 0 100%);
+	}
+	&.btn-light {
+		background: #fff;
+		color: $grey;
+		&:hover, &:focus, &:target {
+			background: darken(#fff, 15%);
+			color: $grey !important;
+		}
+	}
+	&.btn-primary {
+		background: $green;
+		color: #fff;
+		&:hover, &:focus, &:target {
+			background: lighten($green, 15%);
+			color: #fff !important;
+		}
+	}
+}

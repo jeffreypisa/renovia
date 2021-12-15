@@ -1,0 +1,177 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper">
+		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+			<section class="mod-content bg-bluedark" data-scroll-section>
+				<div class="container-fluid">
+					<div class="part1">
+						<div class="image ratio-16x9 bg-cover" style="background-image: url({{ Image(post.thumbnail).src }})"></div>
+						<div class="row">
+							<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+								<div class="vlak bg-greylight">
+									<h1 class="h2"> {{ post.title }} </h1>
+									<div class="line-before">
+										<p> {{ post.samenvatting }} </p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="mod-content bg-bluedark" data-scroll-section>
+				<div class="container">
+					<div class="row">
+						<div class="offset-md-6 col-md-6 col-lg-4">
+							<div class="details">
+								{% if post.titel_1a %}
+									<h2 class="h5"> {{ post.titel_1a }} </h2>
+								{% endif %}
+								{% if post.details %}
+									<div class="lijst">
+										{% for item in post.get_field('details') %}
+											<div class="lijst-item">
+												<div class="row">
+													<div class="col-auto">
+														<label>{{ item.label }}</label>
+													</div>
+													<div class="col">
+														{{ item.tekst }}
+													</div>
+												</div>
+											</div>
+										{% endfor %}
+									</div>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="mod-content bg-white" data-scroll-section>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="image ratio-3x4 bg-cover w-100 pull-up mb-4 mb-md-0" style="background-image: url({{ Image(post.afbeelding_1).src }})"></div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="nogwat">
+								{% if post.titel_1b %}
+									<h2 class="h5 line-bottom"> {{ post.titel_1b }} </h2>
+								{% endif %}
+								{% if post.tekst_1b %}
+									{{ post.tekst_1b }}
+								{% endif %}
+							</div>
+						</div>
+					</div>
+					<br><br><br>
+					<div class="row">
+						<div class="col-md-5 col-lg-4">
+							{% if post.titel_2 %}
+								<h2 class="h5 line-bottom"> {{ post.titel_2 }} </h2>
+							{% endif %}
+							{% if post.tekst_2 %}
+								{{ post.tekst_2 }}
+							{% endif %}
+						</div>
+						<div class="col-md-7 col-lg-8">
+							<div class="image ratio-16x9 bg-cover w-100" style="background-image: url({{ Image(post.afbeelding_2).src }})"></div>
+						</div>
+					</div>
+					<br><br><br>
+					<div class="row">		
+						<div class="col-md-6">
+							<div class="image ratio-4x3 bg-cover w-100 mb-4" style="background-image: url({{ Image(post.afbeelding_3a).src }})"></div>
+							{% if post.titel_3 %}
+								<h2 class="h5 line-bottom"> {{ post.titel_3 }} </h2>
+							{% endif %}
+							{% if post.tekst_3 %}
+								{{ post.tekst_3 }}
+							{% endif %}
+						</div>
+						<div class="col-md-6">
+							<div class="image ratio-3x4 bg-cover w-100" style="background-image: url({{ Image(post.afbeelding_3b).src }})"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="mod-quote" data-scroll-section>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+							<div class="item">	
+								{% if post.statement %}
+									<p class="lead"> {{ post.statement }} </p>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+					
+			<section class="mod-content bg-white" data-scroll-section>
+				<div class="container">
+					<div class="row">
+						<div class="col-md">
+							<div class="image ratio-3x4 bg-cover w-100" style="background-image: url({{ Image(post.afbeelding_5a).src }})"></div>
+						</div>
+						<div class="col-md">
+							<div class="image ratio-3x4 bg-cover w-100" style="background-image: url({{ Image(post.afbeelding_5b).src }})"></div>
+						</div>
+					</div>
+					<br><br>
+					<div class="row">
+						<div class="col-md-10 offset-md-1">
+							{% if post.titel_6 %}
+								<h2 class="h3"> {{ post.titel_6 }} </h2>
+							{% endif %}
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-5 offset-md-1">
+							{% if post.tekst_6a %}
+								{{ post.tekst_6a }}
+							{% endif %}
+						</div>
+						<div class="col-md-5">
+							{% if post.tekst_6b %}
+								{{ post.tekst_6b }}
+							{% endif %}
+						</div>
+					</div>
+					<br><br><br>
+					<div class="image w-100 ratio-16x9 bg-cover" style="background-image: url({{ Image(post.afbeelding_7).src }})"></div>
+					<br><br><br>
+					<div class="row">
+						<div class="col-md-10 offset-md-1">
+							{% if post.tekst_7 %}
+								{{ post.tekst_7 }}
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="mod-cta bg-half" data-scroll-section>
+				<div class="container">
+					<div class="vlak anime-fadein">
+						<div class="after bg-grey"></div>
+						<div class="row">
+							<div class="col-md-8 col-lg-9">
+								{% if post.cta_titel %}
+									<h2>{{ post.cta_titel }}</h2>
+								{% endif %}
+								{{ post.cta_tekst }}
+							</div>
+						</div>
+						{% if post.cta_link %}
+							<a class="btn btn-primary"  href="{{ post.cta_link.url }}" target="{{ post.cta_link.target }}">{{ post.cta_link.title }}</a>
+						{% endif %}
+					</div>
+				</div>
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}

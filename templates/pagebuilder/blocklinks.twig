@@ -1,0 +1,34 @@
+<section id="section{{ sectionno }}" class="mod-blocklinks {{ item.achtergrond }} {% if item.achtergrond == 'bg-darkblue' %} text-white {% endif %}"  data-scroll-section>
+	<div class="container anime-fadein">
+		<div class="row">
+			<div class="col-md-6 col-lg-5 offset-lg-1">
+				{% if item.titel %}
+					<h2 class="h4"> {{ item.titel }} </h2>
+				{% endif %}
+			</div>
+			<div class="col-md-6 col-lg-5">
+				{{ item.tekst }}
+			</div>
+		</div>
+    	<br><br>
+		<div class="blocklinks">
+			<div class="js-slick">
+				{% for item in item.items %}
+					
+					<a href="{{ item.link }}" target="{{ item.link.target}}" class="item item-{{ item.post_type }} tease-{{ stilo }} noline">
+						<div class="card">
+							<div class="bg" style="background-image: url({{ Image(item.thumbnail)|resize(800) }})"></div>
+							<div class="card-body">
+								<h4 class="mb-0">{{ item.title }}</h4>
+							</div>
+						</div>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="text-center">
+			<br>
+			<a class="btn btn-primary" href="/projecten">Alle projecten</a>
+		</div>
+	</div>
+</section>

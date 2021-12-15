@@ -1,0 +1,65 @@
+.single {
+	.line-before {
+		padding-left: 44px;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 12px;
+			left: 0;
+			width: 30px;
+			height: 2px;
+			background: $grey;
+		}
+	}
+	.line-bottom {
+		position: relative;
+		padding-bottom: 0px;
+		margin-bottom: 40px;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -20px;
+			left: 0;
+			width: 70px;
+			height: 2px;
+			background: $grey;
+		}
+	}
+	.part1 {
+		padding-top: 60px;
+		.vlak {
+			padding: 90px 60px;
+			margin-top: -180px;
+			clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+		}
+	}
+	.details {
+		.lijst {
+			border-top: 1px solid $grey;
+			.lijst-item {
+				padding: 15px 0;
+				border-bottom: 1px solid $grey;
+				.col-auto {
+					min-width: 120px;
+				}
+				label {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.single {
+		.mod-content {
+			overflow: visible;
+		}
+		.pull-up {
+			margin-top: calc(-80% - 60px);
+			z-index: 1;
+			position: relative;
+		}
+	}
+}

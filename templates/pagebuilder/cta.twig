@@ -1,0 +1,19 @@
+<section id="section{{ sectionno }}" class="mod-cta" data-scroll-section>
+	<div class="bg" style="background-image: url({{ Image(item.afbeelding).src }})"></div>
+	<div class="container">
+		<div class="vlak anime-fadein">
+			<div class="after"></div>
+			<div class="row">
+				<div class="col-md-8 col-lg-9">
+					{% if item.titel %}
+						<h2>{{ item.titel }}</h2>
+					{% endif %}
+					{{ item.tekst }}
+				</div>
+			</div>
+			{% if item.link %}
+				<a class="btn btn-light"  href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+			{% endif %}
+		</div>
+	</div>
+</section>

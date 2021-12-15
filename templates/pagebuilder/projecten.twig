@@ -1,0 +1,36 @@
+<section id="section{{ sectionno }}" class="mod-projecten {{ item.achtergrond }}" data-scroll-section>
+  <div class="container anime-fadein">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+      	{% if item.titel %}
+      		<div class="text-center">
+				<h2 class="blue"> {{ item.titel }} </h2>
+      		</div>
+      	{% endif %}
+      </div>
+    </div>
+  </div>
+	{% if item.projecten %}
+		<div class="container">
+			<div class="js-slick-projecten">
+				{% for item in item.projecten %}
+					<div class="item">
+						<div class="row">
+							<div class="col-md-4 col-lg-3 content">
+								<div class="inside">
+									<h4> {{ item.title }} </h4>
+									{{ item.samenvatting }}
+								</div>
+							</div>
+							<div class="col-md-8 col-lg-9 image">
+								<div class="ratio-4x3 w-100 mb-30 mb-md-0">
+									<div class="bg-cover" style="background-image: url({{ Image(item.thumbnail)|resize(1024) }})"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	{% endif %}  
+</section>

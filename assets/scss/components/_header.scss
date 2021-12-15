@@ -1,0 +1,91 @@
+body:not(.home):not(.single) {
+	padding-top: 66px;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	transition: 1s $ease;
+	height: 66px;
+	padding: 20px 0;
+	.header-brand {
+		display: block;
+		background: url($logo_sm_color);
+		height: 79px;
+		width: 154px;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	ul {
+		list-style-type: none;
+		li {
+			display: inline-block;
+			margin-left: 0;
+			a {
+				text-decoration: none;
+				font-size: 18px;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	body:not(.home):not(.single)  {
+		padding-top: 90px;
+	}
+	
+	header {
+		position: fixed;
+		height: 120px;
+		&.nav-up {
+			transform: translateY(-144px);
+			transition-delay: color .6s;
+			.header-brand {
+				transition-delay: background .6s;
+			}
+		}
+		&.nav-down {
+			transform: translateY(0);
+			transition-delay: background .6s;
+		}
+		&.nav-up, &.nav-down {
+			background: $dark;
+			.header-brand {
+				display: block;
+			}
+		}
+		&.nav-down {
+			box-shadow: $box-shadow;
+		}
+		ul {
+			list-style-type: none;
+			li {
+				display: inline-block;
+				margin-left: 15px;
+				a {
+					border-radius: 100px;
+					font-size: 16px;
+					&:hover, &:focus {
+						color: $green !important;
+					}
+				}
+				&.current-menu-item,
+				&.current-menu-item:hover {
+					a {
+						position: relative;
+						color: $green;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	header {
+	}
+}

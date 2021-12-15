@@ -1,0 +1,39 @@
+<footer id="footer" class="section bg-bluedark" data-scroll-section>
+  <div class="container">
+    <p class="h6"> Renovia bouwt, herstelt, ontzorgt </p>
+    <div class="row">
+      <div class="col-lg-6">
+        {{ options.over_ons }}
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-md-4">
+            {% include "menu.twig" with {'menu': footermenu1.get_items} %}
+            <br>
+          </div>
+          <div class="col-md-4">
+            {% include "menu.twig" with {'menu': footermenu2.get_items} %}
+            <br>
+          </div>
+          <div class="col-md-4">
+            {{ options.contact }}
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="subfooter">
+    	<br>
+    	<div class="row">
+    		<div class="col-md">
+		      <span class="float-left"> 
+            © {{ "now"|date('Y') }} Renovia BV
+          </span>
+    		</div>
+    		<div class="col-md-auto">
+					<span class="float-md-right"> Site by <a class="orange" href="http://www.stoerebinken.nl"> Stoere Binken </a></span>
+    		</div>
+    	</div>
+    </div>
+  </div>
+</footer>

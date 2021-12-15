@@ -1,0 +1,30 @@
+{# This file demonstrates using most of the index.twig template and modifying 
+   just a small part. See `search.twig` for an example of another approach #}
+
+{% extends "base.twig" %}
+
+{% block content %}
+  <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+    <section class="mod-archive" data-scroll-section>
+      {% if categories %}
+        <div class="mod-categories mb-5">
+          <div class="container text-center">
+            <a href="/projecten" class="btn btn-outline-primary {% if current_category == '' %} active {% endif %}"> alle </a>
+            {% for item in categories %}
+            <a href="{{ item.link }}" class="btn btn-outline-primary {% if item.id == current_category %} active {% endif %}">{{ item.title|lower }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+        <div class="row">
+          {% set stilo = 0 %}
+          {% for item in posts %}
+            <div class="col-md-4">
+              {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+            </div>
+          {% endfor %}
+        </div>
+        {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+    </section>
+  </article>
+{% endblock %}

@@ -1,0 +1,10 @@
+footer {
+	padding: 60px 0;
+	position: relative;
+}
+
+@include media-breakpoint-up(md) {
+	footer {
+
+	}
+}

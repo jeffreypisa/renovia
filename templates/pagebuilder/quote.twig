@@ -1,0 +1,26 @@
+<section class="mod-quote" data-scroll-section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+				<div class="item_bg">
+					{% if item.achtergrond == 'bg-bluedark' %}
+					<img src="{{ theme.link }}/assets/img/shape.svg" />
+					{% else %}
+					<img src="{{ theme.link }}/assets/img/shape.svg" />
+					{% endif %}
+				</div>
+				<div class="js-slick-reacties">
+	    			{% for item in item.items %}
+						<div class="item">	
+							<div data-mh>
+								{% if item.tekst %}
+									<span class="h4">{{ item.tekst }}</span>
+								{% endif %}
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
