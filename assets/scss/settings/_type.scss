@@ -23,6 +23,18 @@
   url('../fonts/fa-brands-400.svg#fontawesome') format('svg');
 }
 
+@font-face {
+  font-family: 'Font Awesome 5';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/fa-light-300.eot');
+  src: url('../fonts/fa-light-300.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/fa-light-300.woff2') format('woff2'),
+  url('../fonts/fa-light-300.woff') format('woff'),
+  url('../fonts/fa-light-300.ttf') format('truetype'),
+  url('../fonts/fa-light-300.svg#fontawesome') format('svg');
+}
+
 .fab {
   font-family: 'Font Awesome 5 Brands';
 }
@@ -173,7 +185,7 @@ $headings-margin-bottom:      $spacer * 2;
 $headings-font-family:        null;
 $headings-font-style:         null;
 $headings-font-weight:        400;
-$headings-line-height:        1.4;
+$headings-line-height:        1.2;
 $headings-color:              inherit;
 // scss-docs-end headings-variables
 

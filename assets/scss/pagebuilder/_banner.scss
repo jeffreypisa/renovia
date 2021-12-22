@@ -155,13 +155,13 @@
       }
       .p1 {
         transform: rotate(-45deg);
-        left: 0;
+        left: 1px;
         top: auto;
         bottom: 0;
       }
       .p2 {
         transform: rotate(45deg);
-        right: 0;
+        right: -1px;
         top: auto;
         bottom: 0;
       }

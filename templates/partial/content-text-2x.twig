@@ -1,0 +1,23 @@
+<section class="mod-content single-content content-text-2x" data-scroll-section>
+	<div class="container anime-fadein">
+		<div class="row">
+			<div class="col-md-10 offset-md-1">
+				{% if item.titel %}
+					<h2 class="h3"> {{ item.titel }} </h2>
+				{% endif %}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-5 offset-md-1">
+				{% if item.tekst %}
+					{{ item.tekst }}
+				{% endif %}
+			</div>
+			<div class="col-md-5">
+				{% if item.tekst2 %}
+					{{ item.tekst2 }}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>

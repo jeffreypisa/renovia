@@ -3,28 +3,28 @@
 {% block content %}
 	<div class="content-wrapper">
 		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
-			<section class="mod-content bg-bluedark" data-scroll-section>
+			<section class="mod-content bg-bluedark part1" data-scroll-section>
 				<div class="container-fluid">
-					<div class="part1">
-						<div class="image ratio-16x9 bg-cover" style="background-image: url({{ Image(post.thumbnail).src }})"></div>
-						<div class="row">
-							<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-								<div class="vlak bg-greylight">
-									<h1 class="h2"> {{ post.title }} </h1>
-									<div class="line-before">
-										<p> {{ post.samenvatting }} </p>
-									</div>
+					<div class="image ratio-16x9 w-100 anime-reveal">
+						<div class="bg-cover" style="background-image: url({{ Image(post.thumbnail)|resize(1920) }})"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+							<div class="vlak bg-greylight anime-fadein">
+								<h1 class="h2"> {{ post.title }} </h1>
+								<div class="line-before">
+									<p> {{ post.samenvatting }} </p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="mod-content bg-bluedark" data-scroll-section>
+			<section class="mod-content bg-bluedark part2" data-scroll-section>
 				<div class="container">
 					<div class="row">
 						<div class="offset-md-6 col-md-6 col-lg-4">
-							<div class="details">
+							<div class="details anime-fadein">
 								{% if post.titel_1a %}
 									<h2 class="h5"> {{ post.titel_1a }} </h2>
 								{% endif %}
@@ -49,14 +49,18 @@
 					</div>
 				</div>
 			</section>
-			<section class="mod-content bg-white" data-scroll-section>
+			
+			
+			<section class="mod-content bg-transparent part3" data-scroll-section>
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
-							<div class="image ratio-3x4 bg-cover w-100 pull-up mb-4 mb-md-0" style="background-image: url({{ Image(post.afbeelding_1).src }})"></div>
+							<div class="image ratio-3x4 w-100 anime-reveal pull-up mb-4 mb-md-0">
+								<div class="bg-cover" style="background-image: url({{ Image(post.afbeelding_1)|resize(1920) }})"></div>
+							</div>
 						</div>
-						<div class="col-md-6 col-lg-4">
-							<div class="nogwat">
+						<div class="col-md-6 col-lg-4 d-flex align-items-end">
+							<div class="nogwat anime-fadein">
 								{% if post.titel_1b %}
 									<h2 class="h5 line-bottom"> {{ post.titel_1b }} </h2>
 								{% endif %}
@@ -66,95 +70,37 @@
 							</div>
 						</div>
 					</div>
-					<br><br><br>
-					<div class="row">
-						<div class="col-md-5 col-lg-4">
-							{% if post.titel_2 %}
-								<h2 class="h5 line-bottom"> {{ post.titel_2 }} </h2>
-							{% endif %}
-							{% if post.tekst_2 %}
-								{{ post.tekst_2 }}
-							{% endif %}
-						</div>
-						<div class="col-md-7 col-lg-8">
-							<div class="image ratio-16x9 bg-cover w-100" style="background-image: url({{ Image(post.afbeelding_2).src }})"></div>
-						</div>
-					</div>
-					<br><br><br>
-					<div class="row">		
-						<div class="col-md-6">
-							<div class="image ratio-4x3 bg-cover w-100 mb-4" style="background-image: url({{ Image(post.afbeelding_3a).src }})"></div>
-							{% if post.titel_3 %}
-								<h2 class="h5 line-bottom"> {{ post.titel_3 }} </h2>
-							{% endif %}
-							{% if post.tekst_3 %}
-								{{ post.tekst_3 }}
-							{% endif %}
-						</div>
-						<div class="col-md-6">
-							<div class="image ratio-3x4 bg-cover w-100" style="background-image: url({{ Image(post.afbeelding_3b).src }})"></div>
-						</div>
-					</div>
 				</div>
 			</section>
 			
-			<section class="mod-quote" data-scroll-section>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-							<div class="item">	
-								{% if post.statement %}
-									<p class="lead"> {{ post.statement }} </p>
-								{% endif %}
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+			{% for item in post.get_field('contentblokken') %}
+			
+				{% if item.acf_fc_layout == 'text' %}
+					{% include 'partial/content-text.twig' %}	
+				
+				{% elseif item.acf_fc_layout == 'text_x2' %}
+					{% include 'partial/content-text-2x.twig' %}	
+				
+				{% elseif item.acf_fc_layout == 'image' %}
+					{% include 'partial/content-image.twig' %}	
+				
+				{% elseif item.acf_fc_layout == 'image_x2' %}
+					{% include 'partial/content-image-2x.twig' %}	
+				
+				{% elseif item.acf_fc_layout == 'text_image' %}
+					{% include 'partial/content-text-image.twig' %}
+				
+				{% elseif item.acf_fc_layout == 'text_image_x2' %}
+					{% include 'partial/content-text-image-2x.twig' %}
+				
+				{% elseif item.acf_fc_layout == 'statement' %}
+					{% include 'partial/content-statement.twig' %}
 					
-			<section class="mod-content bg-white" data-scroll-section>
-				<div class="container">
-					<div class="row">
-						<div class="col-md">
-							<div class="image ratio-3x4 bg-cover w-100" style="background-image: url({{ Image(post.afbeelding_5a).src }})"></div>
-						</div>
-						<div class="col-md">
-							<div class="image ratio-3x4 bg-cover w-100" style="background-image: url({{ Image(post.afbeelding_5b).src }})"></div>
-						</div>
-					</div>
-					<br><br>
-					<div class="row">
-						<div class="col-md-10 offset-md-1">
-							{% if post.titel_6 %}
-								<h2 class="h3"> {{ post.titel_6 }} </h2>
-							{% endif %}
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-5 offset-md-1">
-							{% if post.tekst_6a %}
-								{{ post.tekst_6a }}
-							{% endif %}
-						</div>
-						<div class="col-md-5">
-							{% if post.tekst_6b %}
-								{{ post.tekst_6b }}
-							{% endif %}
-						</div>
-					</div>
-					<br><br><br>
-					<div class="image w-100 ratio-16x9 bg-cover" style="background-image: url({{ Image(post.afbeelding_7).src }})"></div>
-					<br><br><br>
-					<div class="row">
-						<div class="col-md-10 offset-md-1">
-							{% if post.tekst_7 %}
-								{{ post.tekst_7 }}
-							{% endif %}
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="mod-cta bg-half" data-scroll-section>
+				{% endif %}
+				
+			{% endfor %}
+			
+			<section class="mod-cta bg-half part5 pt-0" data-scroll-section>
 				<div class="container">
 					<div class="vlak anime-fadein">
 						<div class="after bg-grey"></div>

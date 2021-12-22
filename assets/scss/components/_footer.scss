@@ -1,6 +1,33 @@
 footer {
 	padding: 60px 0;
 	position: relative;
+	h6 {
+		opacity: 0.5;
+	}
+	.nav {
+		li {
+			display: block;
+			width: 100%;
+			a {
+				padding: 0;
+				color: #fff;
+			}
+		}
+	}
+	.subfooter {
+		a, p {
+			font-size: 12px;
+			line-height: 16px;
+			color: $grey;
+			text-decoration: none;
+		}
+		a {
+			transition: 0.4 $ease;
+		}
+		a:hover {
+			color: $orange;
+		}
+	}
 }
 
 @include media-breakpoint-up(md) {

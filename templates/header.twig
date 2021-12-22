@@ -1,13 +1,4 @@
-{% set headercolor = '' %}
-
-{% for item in post.get_field('blokken') %}
-	{% if item.acf_fc_layout == 'banner' %}
-		{% set headercolor = 'text-white' %}
-	{% endif %}
-{% endfor %}
-
-
-<header class="header text-white">
+<header class="header text-white {% if fn('is_front_page') %} {% else %} bg-bluedark {% endif %}">
 	<div class="container-fluid"> 
 		<div class="row g-2">
 			<div class="col d-flex align-items-center">

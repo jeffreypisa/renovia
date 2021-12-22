@@ -9,6 +9,14 @@
   ],
   "creatorBuild" : "34264",
   "files" : {
+    "\/.nova\/Publishing\/Emonks.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.nova\/Publishing\/Emonks-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/404.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -256,6 +264,36 @@
       "oA" : 0,
       "oAP" : "\/assets\/fonts\/fa-light-300.woff2",
       "oF" : 0
+    },
+    "\/assets\/fonts\/fontawesome.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/fonts\/fontawesome.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/fonts\/light.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/fonts\/light.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
     },
     "\/assets\/fonts\/Varela.woff" : {
       "cB" : 0,
@@ -827,6 +865,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/scss\/pagebuilder\/_overons.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/pagebuilder\/_overons.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/assets\/scss\/pagebuilder\/_projecten.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -1073,6 +1126,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/author.php",
+      "oF" : 0
+    },
+    "\/content-text-image.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/content-text-image.twig",
       "oF" : 0
     },
     "\/favicon.ico" : {
@@ -1839,17 +1900,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/node_modules\/animejs\/lib\/anime.es.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/node_modules\/animejs\/lib\/anime.es-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
     "\/node_modules\/bootstrap\/dist\/js\/bootstrap.esm.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -1857,6 +1907,17 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/node_modules\/bootstrap\/dist\/js\/bootstrap.esm-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/node_modules\/in-view\/dist\/in-view.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/node_modules\/in-view\/dist\/in-view.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -2188,6 +2249,14 @@
       "oAP" : "\/templates\/pagebuilder\/blocklinks.twig",
       "oF" : 0
     },
+    "\/templates\/pagebuilder\/contact.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/pagebuilder\/contact.twig",
+      "oF" : 0
+    },
     "\/templates\/pagebuilder\/content.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2202,6 +2271,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/pagebuilder\/cta.twig",
+      "oF" : 0
+    },
+    "\/templates\/pagebuilder\/overons.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/pagebuilder\/overons.twig",
       "oF" : 0
     },
     "\/templates\/pagebuilder\/projecten.twig" : {
@@ -2242,6 +2319,62 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/templates\/partial\/bannerslider.twig",
+      "oF" : 0
+    },
+    "\/templates\/partial\/content-image-2x.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/partial\/content-image-2x.twig",
+      "oF" : 0
+    },
+    "\/templates\/partial\/content-image.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/partial\/content-image.twig",
+      "oF" : 0
+    },
+    "\/templates\/partial\/content-statement.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/partial\/content-statement.twig",
+      "oF" : 0
+    },
+    "\/templates\/partial\/content-text-2x.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/partial\/content-text-2x.twig",
+      "oF" : 0
+    },
+    "\/templates\/partial\/content-text-image-2x.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/partial\/content-text-image-2x.twig",
+      "oF" : 0
+    },
+    "\/templates\/partial\/content-text-image.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/partial\/content-text-image.twig",
+      "oF" : 0
+    },
+    "\/templates\/partial\/content-text.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/partial\/content-text.twig",
       "oF" : 0
     },
     "\/templates\/partial\/pagination.twig" : {

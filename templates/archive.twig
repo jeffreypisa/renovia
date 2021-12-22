@@ -9,17 +9,17 @@
       {% if categories %}
         <div class="mod-categories mb-5">
           <div class="container text-center">
-            <a href="/projecten" class="btn btn-outline-primary {% if current_category == '' %} active {% endif %}"> alle </a>
+            <a href="/projecten" class="btn {% if current_category == '' %} btn-primary {% endif %}"> alle </a>
             {% for item in categories %}
-            <a href="{{ item.link }}" class="btn btn-outline-primary {% if item.id == current_category %} active {% endif %}">{{ item.title|lower }}</a>
+            <a href="{{ item.link }}" class="btn  {% if item.id == current_category %} btn-primary {% endif %}">{{ item.title|lower }}</a>
             {% endfor %}
           </div>
         </div>
       {% endif %}
-        <div class="row">
+        <div class="row anime-fadein">
           {% set stilo = 0 %}
           {% for item in posts %}
-            <div class="col-md-4">
+            <div class="col-6 col-md-4">
               {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
             </div>
           {% endfor %}

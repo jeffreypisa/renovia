@@ -1,5 +1,5 @@
 section {
-	padding: 40px 0;
+	padding: 60px 0;
 }
 
 section.bg-transparent + section.bg-transparent,
@@ -34,22 +34,22 @@ section.bg-greylight + section.bg-greylight {
 
 @include media-breakpoint-up(xl) {
 	section {
-		padding: 100px 0;
-	}
-	section.bg-transparent + section.bg-transparent,
-	section.bg-white + section.bg-white,
-	section.bg-greylight + section.bg-greylight {
-		margin-top: -100px;
-	}
-}
-
-@include media-breakpoint-up(xxl) {
-	section {
 		padding: 110px 0;
 	}
 	section.bg-transparent + section.bg-transparent,
 	section.bg-white + section.bg-white,
 	section.bg-greylight + section.bg-greylight {
 		margin-top: -110px;
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	section {
+		padding: 130px 0;
+	}
+	section.bg-transparent + section.bg-transparent,
+	section.bg-white + section.bg-white,
+	section.bg-greylight + section.bg-greylight {
+		margin-top: -130px;
 	}
 }

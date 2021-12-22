@@ -1,0 +1,51 @@
+<section class="mod-overons" data-scroll-section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-lg-5 offset-lg-1 anime-fadein">
+				{% if item.titel %}
+					<h2 class="text-green"> {{ item.titel }} </h2>
+				{% endif %}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-lg-5 offset-lg-1 anime-fadein">
+				{% if item.lead %}
+					<p class="lead">
+						{{ item.lead }}
+					</p>
+				{% endif %}
+				{{ item.tekst }}
+			</div>
+			<div class="col-md-6 col-lg-5">
+				<div class="image ratio-3x4 w-100 anime-reveal">
+					<div class="bg-cover" style="background-image: url({{ Image(item.afbeelding).src }})"></div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<div class="row anime-fadein">
+			<div class="col-md-4 d-flex align-items-center">
+				<div class="vlak bg-green text-white">
+					{% if item.cta_titel %}
+						<h2> {{ item.cta_titel }} </h2>
+					{% endif %}
+					{{ item.cta_tekst }}
+					<div class="clearfix"></div>
+					<br>
+					{% if item.cta_link %}
+						<a class="btn-link"  href="{{ item.cta_link.url }}" target="{{ item.cta_link.target }}">{{ item.cta_link.title }}</a>
+					{% endif %}
+				</div>
+			</div>
+			<div class="col-md-8 d-flex align-items-center">
+				<div class="image ratio-4x3 bg-cover w-100" style="background-image: url({{ Image(item.cta_afbeelding).src }})"></div>
+			</div>
+		</div>
+		<br><br>
+		<div class="text-center">
+			{% if item.link %}
+				<a class="btn btn-primary"  href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+			{% endif %}
+		</div>
+	</div>
+</section>

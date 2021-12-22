@@ -22,6 +22,12 @@
 	{% elseif item.acf_fc_layout == 'cta' %}
 		{% include 'pagebuilder/cta.twig' %}
 	
+	{% elseif item.acf_fc_layout == 'contact' %}
+		{% include 'pagebuilder/contact.twig' %}
+		
+	{% elseif item.acf_fc_layout == 'overons' %}
+		{% include 'pagebuilder/overons.twig' %}
+	
 	{% elseif item.acf_fc_layout == 'video' %}
 		{% include 'pagebuilder/video.twig' %}
 		

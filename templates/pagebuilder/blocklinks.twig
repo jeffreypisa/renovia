@@ -10,16 +10,16 @@
 				{{ item.tekst }}
 			</div>
 		</div>
-    	<br><br>
+    	<br>
 		<div class="blocklinks">
 			<div class="js-slick">
 				{% for item in item.items %}
-					
 					<a href="{{ item.link }}" target="{{ item.link.target}}" class="item item-{{ item.post_type }} tease-{{ stilo }} noline">
 						<div class="card">
 							<div class="bg" style="background-image: url({{ Image(item.thumbnail)|resize(800) }})"></div>
 							<div class="card-body">
-								<h4 class="mb-0">{{ item.title }}</h4>
+								<h6 class="mb-2">{{ item.title }}</h6>
+								<h3 class="mb-0">{{ item.get_terms('project_categorie')|first }}</h3>
 							</div>
 						</div>
 					</a>

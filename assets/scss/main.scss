@@ -13,6 +13,11 @@ Theme by Emonks
 @import "../node_modules/bootstrap/scss/mixins"; // Required
 @import "../node_modules/bootstrap/scss/utilities"; // Required
 
+// FontAwesome
+// @import '../fonts/brands';
+@import '../fonts/light';
+@import '../fonts/fontawesome';
+
 // Custom settings
 @import 'settings/images';
 @import 'settings/options';
@@ -98,5 +103,6 @@ Theme by Emonks
 @import 'pagebuilder/content';
 @import 'pagebuilder/cta';
 @import 'pagebuilder/banner';
+@import 'pagebuilder/overons';
 @import 'pagebuilder/projecten';
 @import 'pagebuilder/quote';

@@ -1,0 +1,16 @@
+<section class="mod-quote single-content" data-scroll-section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+				<div class="item anime-fadein">	
+					{% if item.tekst %}
+						<p class="lead"> {{ item.tekst }} </p>
+					{% endif %}
+					{% if item.link %}
+						<a class="btn-link"  href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
