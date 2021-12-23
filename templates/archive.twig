@@ -8,11 +8,13 @@
     <section class="mod-archive" data-scroll-section>
       {% if categories %}
         <div class="mod-categories mb-5">
-          <div class="container text-center">
-            <a href="/projecten" class="btn {% if current_category == '' %} btn-primary {% endif %}"> alle </a>
-            {% for item in categories %}
-            <a href="{{ item.link }}" class="btn  {% if item.id == current_category %} btn-primary {% endif %}">{{ item.title|lower }}</a>
-            {% endfor %}
+          <div class="holder">
+            <div class="container text-center">
+              <a href="/projecten" class="btn {% if current_category == '' %} btn-primary {% endif %}"> alle </a>
+              {% for item in categories %}
+              <a href="{{ item.link }}" class="btn  {% if item.id == current_category %} btn-primary {% endif %}">{{ item.title|lower }}</a>
+              {% endfor %}
+            </div>
           </div>
         </div>
       {% endif %}

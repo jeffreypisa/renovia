@@ -835,6 +835,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/scss\/pagebuilder\/_categories.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/pagebuilder\/_categories.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/assets\/scss\/pagebuilder\/_content.scss" : {
       "aP" : 1,
       "bl" : 0,

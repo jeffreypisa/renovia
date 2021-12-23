@@ -1,8 +1,8 @@
-<section class="mod-content single-content content-image-2x" data-scroll-section>
+<section class="mod-content single-content content-text-image-2x" data-scroll-section>
 	<div class="container">
 		<div class="row">		
 			<div class="col-md-6 d-flex flex-column align-items-start">
-				<div class="image ratio-4x3 w-100 mb-4 anime-reveal">
+				<div class="image image1 ratio-4x3 w-100 mb-4 anime-reveal">
 					<div class="bg-cover" style="background-image: url({{ Image(item.afbeelding)|resize(1024) }})"></div>
 				</div>
 				<div class="text anime-fadein mt-auto">
@@ -14,8 +14,8 @@
 					{% endif %}
 				</div>
 			</div>
-			<div class="col-md-6">
-				<div class="image ratio-3x4 w-100 anime-reveal">
+			<div class="col-md-6 order-first order-md-last">
+				<div class="image image2 ratio-3x4 w-100 anime-reveal mb-4 mb-md-0">
 					<div class="bg-cover" style="background-image: url({{ Image(item.afbeelding2)|resize(1024) }})"></div>
 				</div>
 			</div>

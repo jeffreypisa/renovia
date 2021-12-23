@@ -1,6 +1,7 @@
 .mod-overons {
 	position: relative;
 	.vlak {
+		margin-top: -80px;
 		padding: 100px 30px;
 		clip-path: polygon(0 0, 100% 15%, 100% 85%, 0% 100%);
 	}
@@ -21,6 +22,7 @@
 	.mod-overons {
 		position: relative;
 		.vlak {
+			margin-top: 0;
 			margin-right: -100px;
 		}
 	}

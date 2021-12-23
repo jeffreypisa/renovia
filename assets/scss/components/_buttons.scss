@@ -1,3 +1,14 @@
+.bg-green {
+	.btn-link {
+		&:hover {
+			color: #fff;
+			&:after {
+				color: #fff;
+			}
+		}
+	}
+}
+
 .btn {
 	font-weight: 700;
 	font-size: 14px;
