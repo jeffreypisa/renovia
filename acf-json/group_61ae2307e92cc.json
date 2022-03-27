@@ -135,6 +135,31 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_624035f6976f7",
+                            "label": "Verhouding",
+                            "name": "verhouding",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "ratio_4x3": "4x3",
+                                "ratio_3x4": "3x4"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_61c2f4d8593cc",
                             "label": "Afbeelding",
                             "name": "afbeelding",
@@ -168,6 +193,31 @@
                     "label": "2 afbeeldingen",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_624035c9976f6",
+                            "label": "Verhouding",
+                            "name": "verhouding",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "ratio_4x3": "4x3",
+                                "ratio_3x4": "3x4"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
                         {
                             "key": "field_61c2f66c9ca57",
                             "label": "Afbeelding 1",
@@ -686,5 +736,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1640203117
+    "modified": 1648375571
 }

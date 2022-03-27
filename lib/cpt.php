@@ -23,8 +23,7 @@ function create_posttype() {
 			'show_in_rest' 				=> true,
 			'has_archive'             	=> false,
 			'supports'                	=> array( 'title', 'editor', 'thumbnail' ),
-			'rewrite' 					=> array( 'slug' => 'projecten/%project_categorie%', 
-													'with_front' 	=> false ),
+			'rewrite' 					=> array( 'slug' => 'projecten' ),
 		)
 	);
 	

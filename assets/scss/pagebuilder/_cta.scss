@@ -7,7 +7,7 @@
 			content: '';
 			background: $greylight;
 			position: absolute;
-			top: 50%;
+			top: calc(50% - 30px);
 			left: 0;
 			right: 0;
 			bottom: 0;

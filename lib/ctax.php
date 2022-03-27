@@ -24,7 +24,7 @@ function create_project_tax() {
 		'show_ui'           => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
-		'rewrite' 			=> array('slug' => 'projecten' )
+		// 'rewrite' 			=> array('slug' => 'projecten' )
 	);
 
   register_taxonomy('project_categorie', array('projecten'), $args);

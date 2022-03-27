@@ -26,9 +26,11 @@
 				{% endfor %}
 			</div>
 		</div>
-		<div class="text-center">
-			<br>
-			<a class="btn btn-primary" href="/projecten">Alle projecten</a>
-		</div>
+		{% if item.link %}
+			<div class="text-center">
+				<br>
+				<a class="btn btn-primary" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+			</div>
+		{% endif %}
 	</div>
 </section>
