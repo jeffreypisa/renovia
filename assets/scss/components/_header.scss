@@ -81,7 +81,9 @@ header {
 					}
 				}
 				&.current-menu-item,
-				&.current-menu-item:hover {
+				&.current-menu-item:hover,
+				&.menu-item-1893,
+				&.menu-item-1893:hover, {
 					a {
 						position: relative;
 						color: $green;
