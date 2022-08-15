@@ -2,6 +2,20 @@
 
 {% block content %}
 	<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+		{% if post.content %}
+			<section class="mod-defaultcontent" data-scroll-section>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-10 offset-md-1">
+							{% if post.title %}
+								<h2 class="h1 text-green"> {{ post.title }} </h2>
+							{% endif %}
+							{{ post.content }}
+						</div>
+					</div>
+				</div>
+			</section>
+		{% endif %}
 		{% include 'pagebuilder.twig' %}
 	</article>
 {% endblock %}

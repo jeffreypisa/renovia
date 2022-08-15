@@ -6,7 +6,13 @@ export function scrolleffects() {
 	const scroll = new LocomotiveScroll({
 		el: document.querySelector('[data-scroll-container]'),
 		smooth: true,
-		getDirection: true
+		getDirection: true,
+		reloadOnContextChange: true,
+		touchMultiplier: 2,
+		smoothMobile: 0,
+		tablet: {
+			breakpoint: 1024
+		}
 	});
 		
 	scroll.on('scroll', (t) => {			

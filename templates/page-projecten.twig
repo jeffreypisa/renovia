@@ -18,15 +18,17 @@
             </div>
           </div>
         {% endif %}
-        <div class="row anime-fadein">
-          {% set stilo = 0 %}
-          {% for item in posts %}
-            <div class="col-6 col-md-4">
-              {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-            </div>
-          {% endfor %}
+        <div class="container-fluid">
+          <div class="row anime-fadein">
+            {% set stilo = 0 %}
+            {% for item in posts %}
+              <div class="col-6 col-md-4">
+                {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+              </div>
+            {% endfor %}
+          </div>
+          {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
         </div>
-        {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
     </section>
   </article>
 {% endblock %}

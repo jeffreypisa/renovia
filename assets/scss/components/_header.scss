@@ -45,6 +45,20 @@ header {
 		padding-top: 90px;
 	}
 	
+	body.single-projecten,
+	body.page-template-page-projecten,
+	body.tax-project_categorie {
+		header ul li {
+			&.menu-item-1893,
+			&.menu-item-1893:hover, {
+				a {
+					position: relative;
+					color: $green;
+				}
+			}
+		}
+	}
+	
 	header {
 		position: fixed;
 		height: 120px;
@@ -73,20 +87,18 @@ header {
 			li {
 				display: inline-block;
 				margin-left: 5px;
+				&.current-menu-item,
+				&.current-menu-item:hover {
+					a {
+						position: relative;
+						color: $green;
+					}
+				}
 				a {
 					border-radius: 100px;
 					font-size: 16px;
 					&:hover, &:focus {
 						color: $green !important;
-					}
-				}
-				&.current-menu-item,
-				&.current-menu-item:hover,
-				&.menu-item-1893,
-				&.menu-item-1893:hover, {
-					a {
-						position: relative;
-						color: $green;
 					}
 				}
 			}

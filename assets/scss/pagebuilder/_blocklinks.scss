@@ -32,6 +32,16 @@
 				background-size: cover;
 				background-position: center center;
 				transition: 5s all $ease;
+				&:after {
+					content: '';
+					position: absolute;
+					z-index: 0;
+					top: 50%;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: linear-gradient(0deg, rgba(34,37,49,.5) 0%, rgba(34,37,49,0) 100%);
+				}
 			}
 			.card-body {
 				z-index: 1;

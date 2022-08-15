@@ -13,6 +13,8 @@
 		
 		<main>
 			{% if post.title %}
+				<h1 class="d-none">{{ post.title }}</h1>
+			{% elseif title %}
 				<h1 class="d-none">{{ title }}</h1>
 			{% endif %}
 			{% block content %}

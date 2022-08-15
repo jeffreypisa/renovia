@@ -14,7 +14,7 @@
 		<div class="blocklinks">
 			<div class="js-slick">
 				{% for item in item.items %}
-					<a href="{{ item.link }}" target="{{ item.link.target}}" class="item item-{{ item.post_type }} tease-{{ stilo }} noline">
+					<a href="{{ site.url }}/project_categorie/{{ item.get_terms('project_categorie')|first|lower }}" target="{{ item.link.target}}" class="item item-{{ item.post_type }} tease-{{ stilo }} noline">
 						<div class="card">
 							<div class="bg" style="background-image: url({{ Image(item.thumbnail)|resize(800) }})"></div>
 							<div class="card-body">

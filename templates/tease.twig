@@ -14,6 +14,6 @@
 
 {% set stilo = newstilo %}
 
-<a href="{{ item.link }}" target="{{ item.link.target}}" class="tease tease-{{ item.post_type }} tease-{{ stilo }} noline">
+<a href="{{ item.link }}" target="{{ item.link.target}}" class="tease tease-{{ item.post_type }} tease-stilo noline">
 	<div class="bg" style="background-image: url({{ Image(item.thumbnail)|resize(800) }})"></div>
 </a>

@@ -8,16 +8,18 @@
 					<div class="image ratio-16x9 w-100 anime-reveal">
 						<div class="bg-cover" style="background-image: url({{ Image(post.thumbnail)|resize(1920) }})"></div>
 					</div>
-					<div class="row">
-						<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-							<div class="vlak bg-greylight anime-fadein">
-								<h1 class="h2"> {{ post.title }} </h1>
-								<div class="line-before">
-									<p> {{ post.samenvatting }} </p>
+					{% if post.samenvatting %}
+						<div class="row">
+							<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+								<div class="vlak bg-greylight anime-fadein">
+									<h2 class="h2"> {{ post.title }} </h2>
+									<div class="line-before">
+										<p> {{ post.samenvatting }} </p>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					{% endif %}
 				</div>
 			</section>
 			<section class="mod-content bg-bluedark part2" data-scroll-section>
