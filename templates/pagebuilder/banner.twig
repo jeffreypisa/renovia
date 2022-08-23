@@ -21,10 +21,17 @@
 			<iframe src="https://player.vimeo.com/video/{{ item.video }}?background=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 		</div>
 	{% else %}
-		<div id="bannerslider" class="bannerslider carousel slide carousel-fade" data-bs-ride="carousel" data-scroll data-scroll-speed="-3">
+		<div id="bannerslider" class="bannerslider carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="8000" data-scroll data-scroll-speed="-3">
 	  	<div class="carousel-inner">
+			  
+			{% set theslide = random(item.slides|length) %}
+			
+			{% if theslide == '0' %}
+				{% set theslide = '1' %}
+			{% endif %}
+			
 			{% for item in item.slides %}
-				<div class="carousel-item {% if loop.first %}active{% endif %} d-flex align-items-center">
+				<div class="carousel-item {% if loop.index == theslide %}active{% endif %} d-flex align-items-center" ata-bs-interval="8000">
 					<div class="bg" style="background-image: url({{ Image(item.afbeelding).src }})"></div>
 				</div>
 			{% endfor %}
